@@ -687,7 +687,7 @@ void RECEIVE_ATTR RCSwitch::handleInterrupt() {
       // here that a sender will send the signal multiple times,
       // with roughly the same gap between them).
       repeatCount++;
-      if (repeatCount == 2) {
+      if (repeatCount == 1) {
         for(unsigned int i = 1; i <= numProto; i++) {
           if (receiveProtocol(i, changeCount)) {
             // receive succeeded for protocol i
